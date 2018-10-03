@@ -15,6 +15,6 @@ app.get('/success.html', function (req, res) {
   res.render('success', { appLink: 'https://app-redirect.herokuapp.com/app.html?' + q });
 });
 
-app.listen(PORT, function () {
+app.listen(process.env.PORT || PORT, function () {
   console.log('Running on http://localhost:' + PORT);
 });
