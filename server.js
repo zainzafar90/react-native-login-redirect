@@ -12,7 +12,7 @@ app.set('view engine', '.hbs');
 app.get('/success.html', function (req, res) {
   const {state, code} = req.query;
   const q = querystring.stringify({state, code});
-  res.render('success', { appLink: 'https://' + process.env.APPSITE_HOST + '/app.html?' + q });
+  res.render('success', { appLink: 'https://app-redirect.herokuapp.com/app.html?' + q });
 });
 
 app.listen(PORT, function () {
